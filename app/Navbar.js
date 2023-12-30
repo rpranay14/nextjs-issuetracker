@@ -17,7 +17,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="flex items-center space-x-10 h-14 px-6 border-b-2">
+    <nav className="flex items-center space-x-10 h-14 px-6 border-b-2 mb-6">
       <Link href="/">
         <FaBug />
       </Link>
