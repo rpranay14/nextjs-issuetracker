@@ -4,17 +4,25 @@ import Link from 'next/link'
 import React from 'react';
 import IssueStatusBadge from '../Components/IssueStatusBadge';
 
-const fetchIssues=async()=>{
-const issues=await fetch("http://localhost:3001/issue");
-const data=await issues.json();
-return data
 
+const fetchIssues=async()=>{
+  
+
+    const issues=await fetch("http://localhost:3001/issue");
+     const data=await issues.json();
+
+ 
+
+return data
 
 
 }
 
 const Issues =async () => {
-  const data=await fetchIssues()
+
+    const data=await fetchIssues()
+ 
+ 
   
   
   
