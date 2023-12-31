@@ -40,8 +40,8 @@ const Issues =async () => {
         </Table.Header>
         <Table.Body>
           {data.data.map((issue)=>(
-           <Table.Row>
-            <Table.Cell>{issue.title}</Table.Cell>
+           <Table.Row key={issue._id}>
+            <Table.Cell><Link href={`/issues/${issue._id}`}>{issue.title}</Link></Table.Cell>
             <Table.Cell><IssueStatusBadge status={issue.status}/></Table.Cell>
             <Table.Cell>{(new Date(issue.createdAt)).toDateString()}</Table.Cell>
            </Table.Row>
