@@ -1,4 +1,4 @@
-import { Button, Table, TableColumnHeaderCell } from '@radix-ui/themes'
+import { Button,Link as RadixLink, Table, TableColumnHeaderCell } from '@radix-ui/themes'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react';
@@ -41,7 +41,7 @@ const Issues =async () => {
         <Table.Body>
           {data.data.map((issue)=>(
            <Table.Row key={issue._id}>
-            <Table.Cell><Link href={`/issues/${issue._id}`}>{issue.title}</Link></Table.Cell>
+            <Table.Cell><Link href={`/issues/${issue._id}`} passHref legacyBehavior><RadixLink>{issue.title}</RadixLink></Link></Table.Cell>
             <Table.Cell><IssueStatusBadge status={issue.status}/></Table.Cell>
             <Table.Cell>{(new Date(issue.createdAt)).toDateString()}</Table.Cell>
            </Table.Row>
