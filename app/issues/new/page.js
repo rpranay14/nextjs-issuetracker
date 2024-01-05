@@ -22,7 +22,8 @@ const NewIssue = () => {
           const response=await axios.post('http://localhost:3001/issue',issue)
           if(response.data.success){
             console.log("newws")
-            router.push('/issues')
+            router.push('/issues');
+            router.refresh()
           }
         } catch (error) {
           setError("Something went wrong")

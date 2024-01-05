@@ -17,8 +17,8 @@ const LoadingIssuesPage = () => {
       </Table.Row>
     </Table.Header>
     <Table.Body>
-      {data.map((issue)=>(
-       <Table.Row>
+      {data.map((issue,index)=>(
+       <Table.Row key={index}>
         <Table.Cell><Skeleton/></Table.Cell>
         <Table.Cell><Skeleton/></Table.Cell>
         <Table.Cell><Skeleton/></Table.Cell>

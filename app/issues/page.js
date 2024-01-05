@@ -1,5 +1,4 @@
-import { Button,Link as RadixLink, Table, TableColumnHeaderCell } from '@radix-ui/themes'
-import Image from 'next/image'
+import { Button,Link as RadixLink, Table, } from '@radix-ui/themes'
 import Link from 'next/link'
 import React from 'react';
 import IssueStatusBadge from '../Components/IssueStatusBadge';
@@ -52,5 +51,5 @@ const Issues =async () => {
     </div>
   )
 }
-
+export const dynamic="force-dynamic"
 export default Issues

@@ -23,7 +23,7 @@ const Navbar = () => {
       </Link>
       <ul className="flex items-center space-x-6 ">
         {navigationButton.map((navlist) => (
-          <Link
+          <Link 
             className={`${
               navlist.link === pathname ? "text-zinc-900" : "text-zinc-400"
             } hover:text-zinc-800 transition-colors`}
